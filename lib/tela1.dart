@@ -18,7 +18,7 @@ class _HomePageState extends State<Tela1> {
       appBar: AppBar(
         title: Text("MENU"),
         centerTitle: true,
-        backgroundColor: Colors.deepOrangeAccent,
+        backgroundColor: Colors.greenAccent,
       ),
 
       body: SingleChildScrollView(
@@ -29,7 +29,7 @@ class _HomePageState extends State<Tela1> {
             const Icon(
               Icons.add_business_sharp,
               size: 120.0,
-              color: Colors.deepOrangeAccent,
+              color: Colors.greenAccent,
             ),
             Text(
               "Aplicação Principal",

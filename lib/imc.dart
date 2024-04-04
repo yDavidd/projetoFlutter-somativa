@@ -69,7 +69,7 @@ class _MyHomePageState extends State<Home> {
       appBar: AppBar(
           title: Text("Calculadora IMC"),
           centerTitle: true,
-          backgroundColor: Colors.amber,
+          backgroundColor: Colors.greenAccent,
           actions: <Widget>[
             IconButton(onPressed: _limpar_Tela, icon: Icon(Icons.refresh))
           ]),
@@ -81,13 +81,13 @@ class _MyHomePageState extends State<Home> {
             const Icon(
               Icons.person_outline,
               size: 120.0,
-              color: Colors.amber,
+              color: Colors.greenAccent,
             ),
             TextField(
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
                   labelText: "PESO (KG)",
-                  labelStyle: TextStyle(color: Colors.amber)),
+                  labelStyle: TextStyle(color: Colors.greenAccent)),
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 25.0),
               controller: pesoController,
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<Home> {
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
                   labelText: "ALTURA(CM)",
-                  labelStyle: TextStyle(color: Colors.amber)),
+                  labelStyle: TextStyle(color: Colors.greenAccent)),
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 25.0),
               controller: alturaController,
@@ -111,7 +111,7 @@ class _MyHomePageState extends State<Home> {
             ),
             Text(_textoInfo,
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.amber, fontSize: 25.0)),
+                style: TextStyle(color: Colors.greenAccent, fontSize: 25.0)),
           ],
         ),
       ),

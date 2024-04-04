@@ -25,21 +25,21 @@ class Home extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<Home> {
-  TextEditingController usuarioController = new TextEditingController();
-  TextEditingController senhaController = new TextEditingController();
-  String _textoInfo = "Informe seus dados";
+  TextEditingController nomeController = new TextEditingController();
+  TextEditingController precoController = new TextEditingController();
+  String _textoInfo = "Informe os dados";
 
   void _limpar_Tela() {
-    usuarioController.text = "";
-    senhaController.text = "";
+    nomeController.text = "";
+    precoController.text = "";
     setState(() {
-      _textoInfo = "Informe seus dados";
+      _textoInfo = "Informe os dados";
     });
   }
 
   void _cadatrar() {
-    usuarioController.text = "";
-    senhaController.text = "";
+    nomeController.text = "";
+    precoController.text = "";
     setState(() {
       _textoInfo = "Dados cadastrado com sucesso!";
     });
@@ -49,9 +49,9 @@ class _MyHomePageState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text("Cadastro de Usuário"),
+          title: Text("Cadastro de Produtos"),
           centerTitle: true,
-          backgroundColor: Colors.lightBlueAccent,
+          backgroundColor: Colors.greenAccent,
           actions: <Widget>[
             IconButton(onPressed: _limpar_Tela, icon: Icon(Icons.refresh))
           ]),
@@ -63,26 +63,26 @@ class _MyHomePageState extends State<Home> {
             const Icon(
               Icons.person_outline,
               size: 120.0,
-              color: Colors.lightBlueAccent,
+              color: Colors.greenAccent,
             ),
             TextField(
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                  labelText: "Usuário",
-                  labelStyle: TextStyle(color: Colors.lightBlueAccent)),
+                  labelText: "Nome",
+                  labelStyle: TextStyle(color: Colors.greenAccent)),
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 25.0),
-              controller: usuarioController,
+              controller: nomeController,
             ),
             TextField(
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                  labelText: "Senha",
-                  labelStyle: TextStyle(color: Colors.lightBlueAccent)),
+                  labelText: "Preço",
+                  labelStyle: TextStyle(color: Colors.greenAccent)),
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 25.0),
               obscureText: true,
-              controller: senhaController,
+              controller: precoController,
             ),
             Padding(
               padding: const EdgeInsets.only(top: 10, bottom: 10),
@@ -94,7 +94,7 @@ class _MyHomePageState extends State<Home> {
             ),
             Text(_textoInfo,
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.lightBlueAccent, fontSize: 25.0)),
+                style: TextStyle(color: Colors.greenAccent, fontSize: 25.0)),
           ],
         ),
       ),

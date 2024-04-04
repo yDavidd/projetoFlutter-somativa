@@ -53,7 +53,7 @@ class _MyHomePageState extends State<Home> {
       appBar: AppBar(
           title: Text("Cadastro de Usuário"),
           centerTitle: true,
-          backgroundColor: Colors.lightBlueAccent,
+          backgroundColor: Colors.greenAccent,
           actions: <Widget>[
             IconButton(onPressed: _limpar_Tela, icon: Icon(Icons.refresh))
           ]),
@@ -65,13 +65,13 @@ class _MyHomePageState extends State<Home> {
             const Icon(
               Icons.person_outline,
               size: 120.0,
-              color: Colors.lightBlueAccent,
+              color: Colors.greenAccent,
             ),
             TextField(
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
                   labelText: "Usuário",
-                  labelStyle: TextStyle(color: Colors.lightBlueAccent)),
+                  labelStyle: TextStyle(color: Colors.greenAccent)),
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 25.0),
               controller: usuarioController,
@@ -80,7 +80,7 @@ class _MyHomePageState extends State<Home> {
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
                   labelText: "Senha",
-                  labelStyle: TextStyle(color: Colors.lightBlueAccent)),
+                  labelStyle: TextStyle(color: Colors.greenAccent)),
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 25.0),
               obscureText: true,
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<Home> {
             ),
             Text(_textoInfo,
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.lightBlueAccent, fontSize: 25.0)),
+                style: TextStyle(color: Colors.greenAccent, fontSize: 25.0)),
           ],
         ),
       ),
