@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'contador.dart';
 import 'produtos.dart';
 import 'usuario.dart';
-import 'imc.dart';
+import 'imc.dart'; // Importa o arquivo 'imc.dart', que provavelmente contém a definição da classe para calcular o índice de massa corporal.
+
 
 class Tela1 extends StatefulWidget {
   const Tela1({super.key});
@@ -10,7 +11,7 @@ class Tela1 extends StatefulWidget {
   @override
   State<Tela1> createState() => _HomePageState();
 }
-
+//Define a classe _HomePageState, que estende State<Principal> e gerencia o estado da tela Principal
 class _HomePageState extends State<Tela1> {
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,7 @@ class _HomePageState extends State<Tela1> {
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.blueGrey, fontSize: 25.0),
             ),
-            Column(
+            Column( // Cria uma coluna para os botões.
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   ElevatedButton(
@@ -53,7 +54,7 @@ class _HomePageState extends State<Tela1> {
                               builder: (context) => const Imc()),
                         );
                       }),
-                  ElevatedButton(
+                  ElevatedButton(  // Cria um botão elevado para o contador.
                       child: const Text("Contador"),
                       onPressed: () {
                         Navigator.push(
@@ -62,7 +63,7 @@ class _HomePageState extends State<Tela1> {
                               builder: (context) => const Usuario()),
                         );
                       }),
-                  ElevatedButton(
+                  ElevatedButton( // Cria um botão elevado para o cadastro de usuários.
                       child: const Text("Cadastro Usuario"),
                       onPressed: () {
                         Navigator.push(
@@ -71,7 +72,7 @@ class _HomePageState extends State<Tela1> {
                               builder: (context) => const Produtos()),
                         );
                       }),
-                  ElevatedButton(
+                  ElevatedButton( // Cria um botão elevado para o cadastro de produtos.
                       child: const Text("Cadastro de produtos"),
                       onPressed: () {
                         Navigator.push(
